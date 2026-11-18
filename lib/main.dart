@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:random_project_name/block.dart';
 
 void main() {
   runApp(const Nameanything());
@@ -81,52 +82,25 @@ class Nameanything extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      padding: const EdgeInsets.all(14),
-                      decoration: const BoxDecoration(
-                        color: Colors.yellowAccent,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset('assets/images/stailvell.png', width: 30),
-                          const SizedBox(height: 10),
-                          const Text("random Text"),
-                          const SizedBox(height: 10),
-                          const Text("Another random Text"),
-                        ],
+                    Expanded(
+                      child: Block(
+                        "assets/images/stailvell.png",
+                        "random image",
+                        colours: Colors.green,
                       ),
                     ),
-                    Container(
-                      padding: const EdgeInsets.all(10),
-                      decoration: const BoxDecoration(
-                        color: Colors.yellowAccent,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset('assets/images/stailvell.png', width: 30),
-                          const SizedBox(height: 10),
-                          const Text("random Text"),
-                          const SizedBox(height: 10),
-                          const Text("Another random Text"),
-                        ],
+                    Expanded(
+                      child: Block(
+                        "assets/images/stailvell.png",
+                        "random image",
+                        colours: Colors.blue,
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.all(16),
-                      decoration: const BoxDecoration(
-                        color: Colors.yellowAccent,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset('assets/images/stailvell.png', width: 30),
-                          const SizedBox(height: 10),
-                          const Text("random Text"),
-                          const SizedBox(height: 10),
-                          const Text("Another random Text"),
-                        ],
+                    Expanded(
+                      child: Block(
+                        "assets/images/stailvell.png",
+                        "random image",
+                        colours: Colors.red,
                       ),
                     ),
                   ],
