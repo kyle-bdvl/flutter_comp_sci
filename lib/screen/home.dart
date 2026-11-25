@@ -2,7 +2,15 @@ import "package:flutter/material.dart";
 import 'package:random_project_name/block.dart';
 
 class Home extends StatelessWidget {
-  const Home({super.key});
+  final bool isDarkMode;
+  final void Function() onToggleTheme;
+
+  const Home({
+    super.key,
+    required this.isDarkMode,
+    required this.onToggleTheme,
+  });
+
   // potential tool call
   void doSomething(String name) {
     print('Hello $name');
@@ -19,7 +27,14 @@ class Home extends StatelessWidget {
           icon: const Icon(Icons.admin_panel_settings),
         ),
         title: const Center(child: Text("My first App")),
+        actions: [
+          IconButton(
+            icon: Icon(isDarkMode ? Icons.light_mode : Icons.dark_mode),
+            onPressed: onToggleTheme,
+          ),
+        ],
       ),
+
       body: Center(
         child: Column(
           children: [
