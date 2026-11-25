@@ -23,9 +23,9 @@ class _MainPageState extends State<MainPage> {
       //     : ThemeMode.light;
 
       if (_themeMode == ThemeMode.light) {
-        _themeMode = ThemeMode.light;
-      } else {
         _themeMode = ThemeMode.dark;
+      } else {
+        _themeMode = ThemeMode.light;
       }
     });
   }
@@ -33,6 +33,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       themeMode: _themeMode,
